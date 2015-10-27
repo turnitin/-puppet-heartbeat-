@@ -44,6 +44,7 @@ The descriptions are short and their are more variables to tweak your heartbeat 
 node "node01.example.domain" {
 	class {'heartbeat':
         authkey   => 'very5ecure',
+        logfile   => '/var/log/heartbeat',
         nodes     => ['node1.example.domain', 'node2.example.domain'],
         resources => ["node1.example.domain IPaddr2::10.0.1.1/8/eth0:vip1", "node2.example.domain IPaddr2::10.0.1.2/8/eth0:vip2"],
         ucastIf   => 'eth0'
@@ -53,6 +54,7 @@ node "node01.example.domain" {
 node "node02.example.domain" {
 	class {'heartbeat':
         authkey   => 'very5ecure',
+        logfile   => '/var/log/heartbeat',
         nodes     => ['node1.example.domain', 'node2.example.domain'],
         resources => ["node1.example.domain IPaddr2::10.0.1.1/8/eth0:vip1", "node2.example.domain IPaddr2::10.0.1.2/8/eth0:vip2"],
         ucastIf   => 'eth0'
