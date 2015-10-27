@@ -7,7 +7,7 @@ logfile <%= scope.lookupvar('heartbeat::logfile') %>
 logfacility syslog
 <% end %>
 
-<% if virtual == 'openvzve' %>
+<% if scope.lookupvar('heartbeat::virtual') == 'openvzve' %>
 realtime off
 <% end %>
 crm off
