@@ -33,6 +33,7 @@
 #
 class heartbeat (
 	$authkey      = 'secure123',
+	$virtual      = '',
 	$nodes        = '',
 	$resources    = '',
 	$udpport      = 694,
