@@ -59,20 +59,20 @@ class heartbeat (
 	file {
 		"/etc/ha.d/haresources":
 		         notify  => Service["heartbeat"],
-			 mode    => 0644,
+			 mode    => "0644",
 			 owner   => root,
 			 group   => root,
 			 content => template("heartbeat/etc/ha.d/haresources.erb"),
 			 require => Package["heartbeat"];
 		"/etc/ha.d/ha.cf":
 		         notify  => Service["heartbeat"],
-			 mode    => 0644,
+			 mode    => "0644",
 			 owner   => root,
 			 group   => root,
 			 content => template("heartbeat/etc/ha.d/ha.cf.erb"),
 			 require => Package["heartbeat"];
 		"/etc/ha.d/authkeys":
-			 mode    => 0600,
+			 mode    => "0600",
 			 owner   => root,
 			 group   => root,
 			 content => template("heartbeat/etc/ha.d/authkeys.erb"),
