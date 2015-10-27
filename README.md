@@ -1,6 +1,6 @@
 # heartbeat module
 
-This module manages heartbeat service. It uses plain heartbeat and uses unicast instead of broadcast, because that makes less problems in virtual environments.
+This module manages heartbeat service. It uses plain heartbeat and uses unicast instead of broadcast, because that causes less problems in virtual environments.
 
 # Tested on
 
@@ -8,7 +8,7 @@ RHEL/CentOS 6+
 
 # Parameters
 
-The descriptions are short and their are more variables to tweak your heartbeat if needed.
+The descriptions are short and there are more variables to tweak your heartbeat if needed.
 
 <table>
   <tr>
