@@ -37,6 +37,7 @@ class heartbeat (
 	$resources    = '',
 	$udpport      = 694,
 	$ucastIf      = 'eth0',
+	$logfile      = '',
 	$autoFailback = 'off'
 ){
 	package { "heartbeat" : ensure => installed	}
@@ -56,12 +57,14 @@ class heartbeat (
 
 	file {
 		"/etc/ha.d/haresources":
+		         notify  => Service["heartbeat"]
 			 mode    => 0644,
 			 owner   => root,
 			 group   => root,
 			 content => template("heartbeat/etc/ha.d/haresources.erb"),
 			 require => Package["heartbeat"];
 		"/etc/ha.d/ha.cf":
+		         notify  => Service["heartbeat"]
 			 mode    => 0644,
 			 owner   => root,
 			 group   => root,
