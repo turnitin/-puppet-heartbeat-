@@ -19,6 +19,11 @@
 # [*autoFailback*]
 #   Activate/deactivate auto takeover for resources.
 #   Default is off.
+# [*logfile*]
+#   Specify a log location, either a facility (like syslog, default),
+#   or a filepath, like /var/log/heartbeat
+# [*virtual*]
+#   specify what type of virtual host, like openvzve
 #
 # === Example
 #
