@@ -27,6 +27,9 @@ The descriptions are short and their are more variables to tweak your heartbeat 
     <td>udpport</td><td>694</td><td>Port for internal cluster communication.</td>
   </tr>
   <tr>
+    <td>logfile</td><td>syslog</td><td>defaults to syslog facility, otherwise use something like /var/log/heartbeat</td>
+  </tr>
+  <tr>
     <td>ucastIf</td><td>eth0</td><td>Interface on which unicast ip listens.</td>
   </tr>
   <tr>
