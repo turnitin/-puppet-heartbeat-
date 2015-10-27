@@ -57,7 +57,7 @@ class heartbeat (
 
 	file {
 		"/etc/ha.d/haresources":
-		         notify  => Service["heartbeat"]
+		         notify  => Service["heartbeat"],
 			 mode    => 0644,
 			 owner   => root,
 			 group   => root,
